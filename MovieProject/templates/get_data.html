@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch Data</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body{margin:0px;padding:0px;}
+#table{margin:100px 200px;}
+</style>
+</head>
+<body>
+<div>
+    {% include "navbar.html" %}
+</div>
+<div id="table">
+
+    <table border="" align="center" class="table table-hover table_left">
+<!--        <tr>-->
+<!--            <th>Movie Names</th>-->
+<!--            <th>MovieType</th>-->
+<!--            <th>MovieReview</th>-->
+<!--            <th>MovieReleaseDate</th>-->
+<!--            <th>MovieDetails</th>-->
+<!--        </tr>-->
+        {% for k in fetch %}
+        <tr>
+            <td><a href="single_movie/?id={{k.id}}">{{ k.movie_name }}</a></td>
+        </tr>
+<!--        <tr>-->
+<!--            <td>{{ k.movie_type }}</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>{{ k.movie_review }}</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>{{ k.movie_date }}</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>{{ k.movie_details }}</td>-->
+<!--        </tr>-->
+        {% endfor %}
+    </table>
+</div>
+
+
+</body>
+</html>
