@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+body{margin:0px;padding:0px;}
+#table{margin:100px 200px 20px 200px;}
+.buttons{margin:50px 200px 20px 200px;}
+.right{float:right;}
+</style>
+</head>
+<body>
+<div>
+    {% include "navbar.html" %}
+</div>
+<form action="update" class="contact-form" method="POST">
+    {% csrf_token %}
+        <div id="table">
+        <table border="" width="100%" class="table table-hover">
+            <tr>
+                <th>Movie Name</th>
+                <td><input type="text" name="name" class="form-control input-sm" value="{{ movie.movie_name }}"></td>
+            </tr>
+            <tr>
+                <th>Movie Type</th>
+                <td><input type="text" name="type" class="form-control input-sm" value="{{ movie.movie_type }}"></td>
+            </tr>
+            <tr>
+                <th>Movie Review</th>
+                <td><input type="text" name="review" class="form-control input-sm" value="{{ movie.movie_review }}"></td>
+            </tr>
+            <tr>
+                <th>Movie Release Date</th>
+                <td><input type="text" name="date" class="form-control input-sm" value="{{ movie.movie_date }}"></td>
+            </tr>
+            <tr>
+                <th>Movie Details</th>
+                <td><input type="text" name="details" class="form-control input-sm" value="{{ movie.movie_details }}"></td>
+            </tr>
+
+        </table>
+        </div>
+    <div class="buttons">
+        <span>
+            <a href="get_data" class="btn btn-info btn-lg">Back</a>
+        </span>
+        <span class="right">
+            <input type="submit" class="btn btn-info btn-lg" value="Save">
+        </span>
+    </div>
+</form>
+
+</body>
+</html>
