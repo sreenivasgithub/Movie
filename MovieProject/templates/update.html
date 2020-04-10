@@ -20,7 +20,7 @@ body{margin:0px;padding:0px;}
 <div>
     {% include "navbar.html" %}
 </div>
-<form action="update" class="contact-form" method="POST">
+<form action="{% url 'save_update' %}" class="contact-form" method="POST">
     {% csrf_token %}
         <div id="table">
         <table border="" width="100%" class="table table-hover">
@@ -49,7 +49,7 @@ body{margin:0px;padding:0px;}
         </div>
     <div class="buttons">
         <span>
-            <a href="get_data" class="btn btn-info btn-lg">Back</a>
+            <a href="{% url 'get_data' %}" class="btn btn-info btn-lg">Back</a>
         </span>
         <span class="right">
             <input type="submit" class="btn btn-info btn-lg" value="Save">

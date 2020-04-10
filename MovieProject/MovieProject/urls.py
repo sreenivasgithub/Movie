@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-
+#from pdb import set_trace;set_trace()
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'MovieReviewApp', include('MovieReviewApp.urls')),
+    url(r'MovieReviewApp/', include('MovieReviewApp.urls')),
 ]

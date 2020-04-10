@@ -47,11 +47,11 @@ body{margin:0px;padding:0px;}
 </div>
 <div class="buttons">
     <span>
-        <a href="get_data" class="btn btn-info btn-lg">Back</a>
+        <a href="{% url 'get_data' %}" class="btn btn-info btn-lg">Back</a>
     </span>
     <span class="right">
-        <a href="update/?id={{movie.id}}" class="btn btn-info btn-lg">Edit</a>
-        <a href="" class="btn btn-info btn-lg">Delete</a>
+        <a href="{% url 'update' id=movie.id %}" class="btn btn-info btn-lg">Edit</a>
+        <a href="{% url 'delete' id=movie.id %}" class="btn btn-danger btn-lg">Delete</a>
     </span>
 
 </div>

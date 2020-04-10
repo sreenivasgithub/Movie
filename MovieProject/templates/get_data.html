@@ -30,7 +30,7 @@ body{margin:0px;padding:0px;}
 <!--        </tr>-->
         {% for k in fetch %}
         <tr>
-            <td><a href="single_movie/?id={{k.id}}">{{ k.movie_name }}</a></td>
+            <td><a href="{% url 'single_movie' id=k.id %}">{{ k.movie_name }}</a></td>
         </tr>
 <!--        <tr>-->
 <!--            <td>{{ k.movie_type }}</td>-->

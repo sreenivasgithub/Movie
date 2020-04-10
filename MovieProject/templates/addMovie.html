@@ -13,7 +13,7 @@ margin-left:200px;
 <body>
 {% include "navbar.html" %}
 <div class="content">
-    <form action="result" class="contact-form" method="POST">
+    <form action="{% url 'result' %}" class="contact-form" method="POST">
     {% csrf_token %}
     <div class="form-group row">
       <div class="col-xs-4">
