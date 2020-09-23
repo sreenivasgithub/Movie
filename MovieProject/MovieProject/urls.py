@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'MovieReviewApp/', include('MovieReviewApp.urls')),
+    url(r'MovieReviewApp/', include('MovieReviewApp.urls_api')),
 ]

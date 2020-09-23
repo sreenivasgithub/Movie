@@ -4,7 +4,7 @@ from .import views
 # from pdb import set_trace;set_trace()
 
 urlpatterns = [
-    url(r'admin', admin.site.urls),
+    #url(r'admin', admin.site.urls),
     url(r'index', views.index, name='index'),
     url(r'addMovie', views.addMovie, name='addMovie'),
     url(r'result', views.result, name='result'),

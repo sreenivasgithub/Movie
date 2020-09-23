@@ -59,3 +59,6 @@ def delete(request, id):
     return render(request,'index.html')
 def Additional(request):
     return render(request, 'Additional.html')
+
+def Api(request):
+    return HttpResponse('API')
